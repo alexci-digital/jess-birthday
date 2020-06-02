@@ -2,7 +2,860 @@
 <title>Happy Birthday Jessica!</title>
 <head>
 <style>
+@import url('https://fonts.<!DOCTYPE html>
+<title>Happy Birthday Jessica!</title>
+<head>
+<style>
 @import url('https://fonts.googleapis.com/css?family=Concert+One|Pacifico');
+
+.mobile {
+position: fixed;
+text-align: center;
+width: 100%;
+top: 50px;
+font-size: 90px;
+display: block;
+}
+
+h1, h2, span {
+display: none;
+
+}
+
+#all{
+width:100%;
+height:100%;
+overflow-x:hidden;
+overflow-y: visible;
+position:relative;
+}
+
+h1, h2, span {
+display: block;
+}
+$colors: #ef8d22, #feff28, #2bd8ff, #fc85e1;
+$particles: 50;
+$width: 500;
+$height: 500;
+
+// Create the explosion...
+$box-shadow: ();
+$box-shadow2: ();
+@for $i from 0 through $particles {
+$box-shadow: $box-shadow,
+random($width)-$width / 2 + px
+random($height)-$height / 1.2 + px
+hsl(random(360), 100, 50);
+$box-shadow2: $box-shadow2, 0 0 #fff
+}
+@mixin keyframes ($animationName) {
+@-webkit-keyframes #{$animationName} {
+@content;
+}
+
+@-moz-keyframes #{$animationName} {
+@content;
+}
+
+@-o-keyframes #{$animationName} {
+@content;
+}
+
+@-ms-keyframes #{$animationName} {
+@content;
+}
+
+@keyframes #{$animationName} {
+@content;
+}
+}
+
+@mixin animation-delay ($settings) {
+-moz-animation-delay: $settings;
+-webkit-animation-delay: $settings;
+-o-animation-delay: $settings;
+-ms-animation-delay: $settings;
+animation-delay: $settings;
+}
+
+@mixin animation-duration ($settings) {
+-moz-animation-duration: $settings;
+-webkit-animation-duration: $settings;
+-o-animation-duration: $settings;
+-ms-animation-duration: $settings;
+animation-duration: $settings;
+}
+
+@mixin animation ($settings) {
+-moz-animation: $settings;
+-webkit-animation: $settings;
+-o-animation: $settings;
+-ms-animation: $settings;
+animation: $settings;
+}
+
+@mixin transform ($settings) {
+transform: $settings;
+-moz-transform: $settings;
+-webkit-transform: $settings;
+-o-transform: $settings;
+-ms-transform: $settings;
+}
+
+body{
+background: linear-gradient(to right, #e2b8f7, #d4bafa, #c7bcfb, #b9befb, #acbff9);
+cursor: crosshair;
+perspective: 1000px;
+transform-style: preserve-3d;
+font-family: "Pacifico",cursive;
+}
+
+h1 {
+position: fixed;
+text-align: center;
+width: 100%;
+top: 120px;
+font-size: 90px;
+background: -webkit-linear-gradient(0deg, rgba(206,173,252,1) 0%, rgba(163,187,251,1) 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-family: 'Concert One', cursive;
+font-weight: 400;
+z-index: -1;
+letter-spacing: 6px;
+}
+
+span {
+position: fixed;
+text-align: center;
+width: 100%;
+top: 70px;
+font-size: 70px;
+}
+
+h2 { 
+position: fixed;
+text-align: center;
+width: 100%;
+top: 50px;
+font-size: 90px;
+background: -webkit-linear-gradient(90deg, rgba(233,230,255,1) 0%, rgba(255,255,255,1) 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+bokeh {
+position: fixed;
+width: 2vmin;
+height: 2vmin;
+border-radius: 50%;
+animation-name: explosion;
+animation-iteration-count: infinite;
+animation-direction: reverse;
+animation-timing-function: cubic-bezier(0.84, 0.02, 1, 1);
+@for $i from 1 through 100 {
+&:nth-child(#{$i}) {
+$color: ceil(random() * 4);
+background-color: nth($colors, $color);
+$x: random() * 100vw;
+$y: random() * 100vh;
+transform: translate($x, $y);
+animation-duration: random() * 3s + 2s;
+animation-delay: random() * -5s;
+}
+}
+}
+@keyframes explosion {
+0% {
+opacity: 0;
+}
+70% {
+opacity: 1;
+}
+100% {
+transform: translate(50vw, 100vh);
+}
+}
+
+.cake {
+position: relative;
+top: 250px;
+margin: auto;
+width: 200px;
+height: 60px;
+background: #f9fdff;
+border-radius: 100%;
+transform: translateZ(100px);
+
+box-shadow: 
+0px 4px 0px #f4f9fd, 
+0px 8px 0px #dba9ff, 
+0px 12px 0px #fec3b3, 
+
+0px 16px 0px #f7f6fb, 
+0px 20px 0px #f7f6fb, 
+0px 24px 0px #f7f6fb,
+0px 28px 0px #f7f6fb,
+0px 32px 0px #fea0bb,
+0px 36px 0px #fea0bb,
+0px 40px 0px #9cef9d,
+0px 44px 0px #9cef9d, 
+
+0px 48px 0px #f7f6fb, 
+0px 52px 0px #f7f6fb, 
+0px 56px 0px #f7f6fb, 
+0px 60px 0px #f7f6fb, 
+0px 64px 0px #f7f6fb, 
+0px 68px 0px #dfa5fc, 
+0px 72px 0px #dfa5fc, 
+0px 76px 0px #fafffe, 
+0px 80px 0px #fafffe;
+}
+
+.plate {
+position: absolute;
+height: 90px;
+width: 300px;
+bottom:-95px;
+left: 50%;
+top: 380px;
+margin-left: -150px;
+border-radius: 100%;
+background: radial-gradient(ellipse closest-side at center, rgba(8,199,254,1) 0%, rgba(4,215,242,1) 71%, rgba(2,255,208,1) 100%);
+box-shadow: 
+0px 3px 0px #00e2e1,
+0px 6px 0px #00d3fb;
+transform: translateZ(80px);
+}
+
+.candle {
+position: relative;
+height: 50px;
+width: 12px;
+top: 280px;
+margin: auto;
+background: linear-gradient(0deg, rgba(183,244,167,1) 0%, rgba(255,255,255,1) 100%);
+border-radius: 4px;
+transform: translateZ(120px);
+}
+
+#flame {
+position: absolute;
+z-index: 10; 
+}
+
+.lit {
+background: linear-gradient(to bottom, #FFF6D9, #FBC36C);
+width: 15px;
+height: 35px;
+
+
+/* Info on border radius. http://www.css3.info/preview/rounded-border/ */
+
+border-top-left-radius: 10px 35px; 
+border-top-right-radius: 10px 35px;
+border-bottom-right-radius: 10px 10px;
+border-bottom-left-radius: 10px 10px;
+top: -34px;
+margin: auto;
+
+/* http://www.css3.info/preview/box-shadow/ */
+box-shadow: 
+0 0 17px 7px rgba(251, 246, 190, 0.71); 
+transform-origin: bottom;
+animation: flicker 1s ease-in-out alternate infinite;
+}
+
+@keyframes flicker {
+0% {
+transform: skewX(5deg);
+box-shadow: 
+0 0 17px 10px rgba(251, 246, 190, 0.71);
+}
+
+25% {
+transform: skewX(-5deg);
+box-shadow: 
+0 0 17px 5px rgba(251, 246, 190, 0.71);
+}
+
+50% {
+transform: skewX(10deg);
+box-shadow: 
+0 0 17px 7px rgba(251, 246, 190, 0.71);
+}
+
+75% {
+transform: skewX(-10deg);
+box-shadow: 
+0 0 17px 5px rgba(251, 246, 190, 0.71);
+}
+
+100% {
+transform: skewX(5deg);
+box-shadow: 
+0 0 17px 10px rgba(251, 246, 190, 0.71);
+}
+}
+
+.pyro > .before, .pyro > .after {
+position: fixed;
+width: 5px;
+height: 5px;
+border-radius: 50%;
+box-shadow: $box-shadow2;
+@include animation((1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards));
+}
+
+.pyro > .after {
+animation-delay: ((1.25s, 1.25s, 1.25s));
+animation-duration:((1.25s, 1.25s, 6.25s));
+}
+
+.container {
+display: flex;
+flex-flow: column;
+justify-content: space-around;
+height: 340px;
+width: 80%;
+max-width: 340px;
+margin: 10vh auto 0;
+}
+
+btn {
+padding: .675em 40px;
+position: relative;
+text-align: center;
+letter-spacing: .15em;
+font-size: 1.2rem;
+cursor: pointer;
+transition: 0.2s linear color;
+}
+
+btn:before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+box-sizing: border-box;
+z-index: -1;
+transform: scale(1, 1);
+transition: 0.2s linear all;
+border-radius: .4rem;
+}
+
+btn:hover:before {
+transform: scale(1.04, 1.02);
+color: #fff;
+}
+
+.red{
+color: #ff5252;
+}
+.red:hover{
+color: #aa1414;
+}
+.red:before{
+border: 4px solid #ff5252;
+}
+.red:hover:before{
+background-color: #ff5252;
+}
+.blue{
+color: #1e83ec;
+}
+.blue:hover{
+color: #0a42a1;
+}
+.blue:before{
+border: 4px solid #1e83ec;
+}
+.blue:hover:before{
+background-color: #1e83ec;
+}
+
+.purple{
+color: #673ab7;
+}
+.purple:hover{
+color: #312174;
+}
+.purple:before{
+border: 4px solid #673ab7;
+}
+.purple:hover:before{
+background-color: #673ab7;
+}
+
+.green{
+color: #1c9963;
+}
+.green:hover{
+color: #0a6842;
+}
+.green:before{
+border: 4px solid #1c9963;
+}
+.green:hover:before{
+background-color: #1c9963;
+}
+
+.frame {
+margin:50px auto;
+border:25px solid #222;
+height:475px;
+width:350px;
+-webkit-box-shadow: px 2px 3px 1px rgba(0, 0, 0, .5);
+box-shadow: 0px 3px 10px 4px rgba(0, 0, 0, .3);
+}
+
+.border {
+background:white;
+height:100%;
+width:100%;
+-webkit-box-shadow: inset 10px 10px 10px 4px rgba(0, 0, 0, .4);
+box-shadow: inset 3px 7px 2px 5px rgba(0, 0, 0, .4);
+}
+
+.image {
+position:absolute;
+height:350px;
+width:250px;
+margin-left:50px;
+margin-top:50px;
+-webkit-box-shadow: inset 10px 10px 10px 4px rgba(0, 0, 0, .6);
+box-shadow: inset 3px 7px 2px 5px rgba(0, 0, 0, .1);
+border:2px inset #c9c9c9;
+}
+
+.text {
+position:absolute;
+margin-top:420px;
+font-family: 'Playball', cursive;
+font-size:30px;
+margin-left:85px;
+}
+
+
+.audio.green-audio-player {
+width: 400px;
+min-width: 300px;
+height: 56px;
+box-shadow: 0 4px 16px 0 rgba(0, 0, 0, .07);
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding-left: 24px;
+padding-right: 24px;
+border-radius: 4px;
+user-select: none;
+-webkit-user-select: none;
+.play-pause-btn {
+display: none;
+cursor: pointer;
+}
+
+
+.spinner {
+width: 18px;
+height: 18px;
+background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/355309/loading.png);
+background-size: cover;
+background-repeat: no-repeat;
+animation: spin 0.4s linear infinite;
+}
+.slider {
+flex-grow: 1;
+background-color: #D8D8D8;
+cursor: pointer;
+position: relative;
+.progress {
+border-radius: inherit;
+position: absolute;
+pointer-events: none;
+.pin {
+height: 16px;
+width: 16px;
+border-radius: 8px;
+position: absolute;
+pointer-events: all;
+box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.32);
+}
+}
+}
+.controls {
+font-family: 'Roboto', sans-serif;
+font-size: 16px;
+line-height: 18px;
+color: #55606E;
+display: flex;
+flex-grow: 1;
+justify-content: space-between;
+align-items: center;
+margin-left: 24px;
+margin-right: 24px;
+.slider {
+margin-left: 16px;
+margin-right: 16px;
+border-radius: 2px;
+height: 4px;
+.progress { 
+width: 0;
+height: 100%;
+.pin {
+right: -8px;
+top: -6px;
+}
+}
+}
+span {
+cursor: default;
+}
+}
+.volume {
+position: relative;
+.volume-btn {
+cursor: pointer;
+&.open path {
+fill: #44BFA3;
+}
+}
+.volume-controls {
+width: 30px;
+height: 135px;
+background-color: rgba(0, 0, 0, 0.62);
+border-radius: 7px;
+position: absolute;
+left: -3px;
+bottom: 52px;
+flex-direction: column;
+align-items: center;
+display: flex;
+&.hidden {
+display: none;
+}
+.slider {
+margin-top: 12px;
+margin-bottom: 12px;
+width: 6px;
+border-radius: 3px;
+.progress {
+bottom: 0;
+height: 100%;
+width: 6px;
+.pin {
+left: -5px;
+top: -8px;
+}
+}
+}
+} 
+}
+}
+svg, img {
+display: block;
+}
+
+</style>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<bokeh></bokeh>
+<div> 
+<div class="pyro">
+<div class="before"></div>
+<div class="after"></div>
+</div>
+<h1>&hearts;&nbsp;&hearts;&nbsp;&hearts;&nbsp;&hearts;&nbsp;&hearts;&nbsp;&hearts;&nbsp;&hearts;&nbsp;&hearts;&nbsp;&hearts;</h1>
+<h2>Happy Birthday Jessica!</h2>
+<span>🎉</span>
+<div class="candle">
+<div id="flame" class="lit"></div>
+</div>
+
+<div class="cake"></div>
+<div class="plate"></div>
+<br></br><br></br><br></br><br></br><br></br><br></br><br>
+
+
+<br></br><br></br><br></br><section class="container">
+
+<div class="holder">
+<div class="audio green-audio-player">
+<div class="loading">
+<div class="spinner"></div>
+</div>
+<div class="play-pause-btn"> 
+<btn class="green">DONT START NOW</btn>
+<path fill="#566574" fill-rule="evenodd" d="M18 12L0 24V0" class="play-pause-icon" id="playPause"/>
+</svg>
+</div>
+
+<div class="controls">
+<span class="current-time">0:00</span>
+<div class="slider" data-direction="horizontal">
+<div class="progress">
+<div class="pin" id="progress-pin" data-method="rewind"></div>
+</div>
+</div>
+<aspan class="total-time">0:00</span>
+</div>
+
+<div class="volume">
+<div class="volume-btn">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+<path fill="#566574" fill-rule="evenodd" d="M14.667 0v2.747c3.853 1.146 6.666 4.72 6.666 8.946 0 4.227-2.813 7.787-6.666 8.934v2.76C20 22.173 24 17.4 24 11.693 24 5.987 20 1.213 14.667 0zM18 11.693c0-2.36-1.333-4.386-3.333-5.373v10.707c2-.947 3.333-2.987 3.333-5.334zm-18-4v8h5.333L12 22.36V1.027L5.333 7.693H0z" id="speaker"/>
+</svg>
+</div>
+<div class="volume-controls hidden">
+<div class="slider" data-direction="vertical">
+<div class="progress">
+<div class="pin" id="volume-pin" data-method="changeVolume"></div>
+</div>
+</div>
+</div>
+</div>
+
+<audio crossorigin>
+<source src="https://res.cloudinary.com/aci-digital/video/upload/v1591123587/Websites/songs/Dua_Lipa_-_Don_t_Start_Now_ykleqe.mp3" type="audio/mpeg">
+</audio>
+</div><section class="container2">
+<div class="frame">
+<div class="border">
+<div class="image">
+<img src="https://res.cloudinary.com/aci-digital/image/upload/v1591121750/Websites/Screenshot_2020-06-02_at_19.15.32_cw7n1n.png" height="350" width="250" alt="" href="https://www.instagram.com/fairyprincessmermaidbarbie/"/>
+</div><!--end image-->
+<div class="text">Maxi More</div>
+</div><!--end border-->
+</div><!--end frame-->
+</section>
+</html>
+<script>
+var audioPlayer = document.querySelector('.green-audio-player');
+var playPause = audioPlayer.querySelector('#playPause');
+var playpauseBtn = audioPlayer.querySelector('.play-pause-btn');
+var loading = audioPlayer.querySelector('.loading');
+var progress = audioPlayer.querySelector('.progress');
+var sliders = audioPlayer.querySelectorAll('.slider');
+var volumeBtn = audioPlayer.querySelector('.volume-btn');
+var volumeControls = audioPlayer.querySelector('.volume-controls');
+var volumeProgress = volumeControls.querySelector('.slider .progress');
+var player = audioPlayer.querySelector('audio');
+var currentTime = audioPlayer.querySelector('.current-time');
+var totalTime = audioPlayer.querySelector('.total-time');
+var speaker = audioPlayer.querySelector('#speaker');
+
+var draggableClasses = ['pin'];
+var currentlyDragged = null;
+
+window.addEventListener('mousedown', function(event) {
+
+if(!isDraggable(event.target)) return false;
+
+currentlyDragged = event.target;
+let handleMethod = currentlyDragged.dataset.method;
+
+this.addEventListener('mousemove', window[handleMethod], false);
+
+window.addEventListener('mouseup', () => {
+currentlyDragged = false;
+window.removeEventListener('mousemove', window[handleMethod], false);
+}, false); 
+});
+
+playpauseBtn.addEventListener('click', togglePlay);
+player.addEventListener('timeupdate', updateProgress);
+player.addEventListener('volumechange', updateVolume);
+player.addEventListener('loadedmetadata', () => {
+totalTime.textContent = formatTime(player.duration);
+});
+player.addEventListener('canplay', makePlay);
+player.addEventListener('ended', function(){
+playPause.attributes.d.value = "M18 12L0 24V0";
+player.currentTime = 0;
+});
+
+volumeBtn.addEventListener('click', () => {
+volumeBtn.classList.toggle('open');
+volumeControls.classList.toggle('hidden');
+})
+
+window.addEventListener('resize', directionAware);
+
+sliders.forEach(slider => {
+let pin = slider.querySelector('.pin');
+slider.addEventListener('click', window[pin.dataset.method]);
+});
+
+directionAware();
+
+function isDraggable(el) {
+let canDrag = false;
+let classes = Array.from(el.classList);
+draggableClasses.forEach(draggable => {
+if(classes.indexOf(draggable) !== -1)
+canDrag = true;
+})
+return canDrag;
+}
+
+function inRange(event) {
+let rangeBox = getRangeBox(event);
+let rect = rangeBox.getBoundingClientRect();
+let direction = rangeBox.dataset.direction;
+if(direction == 'horizontal') {
+var min = rangeBox.offsetLeft;
+var max = min + rangeBox.offsetWidth; 
+if(event.clientX < min || event.clientX > max) return false;
+} else {
+var min = rect.top;
+var max = min + rangeBox.offsetHeight; 
+if(event.clientY < min || event.clientY > max) return false; 
+}
+return true;
+}
+
+function updateProgress() {
+var current = player.currentTime;
+var percent = (current / player.duration) * 100;
+progress.style.width = percent + '%';
+
+currentTime.textContent = formatTime(current);
+}
+
+function updateVolume() {
+volumeProgress.style.height = player.volume * 100 + '%';
+if(player.volume >= 0.5) {
+speaker.attributes.d.value = 'M14.667 0v2.747c3.853 1.146 6.666 4.72 6.666 8.946 0 4.227-2.813 7.787-6.666 8.934v2.76C20 22.173 24 17.4 24 11.693 24 5.987 20 1.213 14.667 0zM18 11.693c0-2.36-1.333-4.386-3.333-5.373v10.707c2-.947 3.333-2.987 3.333-5.334zm-18-4v8h5.333L12 22.36V1.027L5.333 7.693H0z'; 
+} else if(player.volume < 0.5 && player.volume > 0.05) {
+speaker.attributes.d.value = 'M0 7.667v8h5.333L12 22.333V1L5.333 7.667M17.333 11.373C17.333 9.013 16 6.987 14 6v10.707c2-.947 3.333-2.987 3.333-5.334z';
+} else if(player.volume <= 0.05) {
+speaker.attributes.d.value = 'M0 7.667v8h5.333L12 22.333V1L5.333 7.667';
+}
+}
+
+function getRangeBox(event) {
+let rangeBox = event.target;
+let el = currentlyDragged;
+if(event.type == 'click' && isDraggable(event.target)) {
+rangeBox = event.target.parentElement.parentElement;
+}
+if(event.type == 'mousemove') {
+rangeBox = el.parentElement.parentElement;
+}
+return rangeBox;
+}
+
+function getCoefficient(event) {
+let slider = getRangeBox(event);
+let rect = slider.getBoundingClientRect();
+let K = 0;
+if(slider.dataset.direction == 'horizontal') {
+
+let offsetX = event.clientX - slider.offsetLeft;
+let width = slider.clientWidth;
+K = offsetX / width; 
+
+} else if(slider.dataset.direction == 'vertical') {
+
+let height = slider.clientHeight;
+var offsetY = event.clientY - rect.top;
+K = 1 - offsetY / height;
+
+}
+return K;
+}
+
+function rewind(event) {
+if(inRange(event)) {
+player.currentTime = player.duration * getCoefficient(event);
+}
+}
+
+function changeVolume(event) {
+if(inRange(event)) {
+player.volume = getCoefficient(event);
+}
+}
+
+function formatTime(time) {
+var min = Math.floor(time / 60);
+var sec = Math.floor(time % 60);
+return min + ':' + ((sec<10) ? ('0' + sec) : sec);
+}
+
+function togglePlay() {
+if(player.paused) {
+playPause.attributes.d.value = "M0 0h6v24H0zM12 0h6v24h-6z";
+player.play();
+} else {
+playPause.attributes.d.value = "M18 12L0 24V0";
+player.pause();
+} 
+}
+
+function makePlay() {
+playpauseBtn.style.display = 'block';
+loading.style.display = 'none';
+}
+
+function directionAware() {
+if(window.innerHeight < 250) {
+volumeControls.style.bottom = '-54px';
+volumeControls.style.left = '54px';
+} else if(audioPlayer.offsetTop < 154) {
+volumeControls.style.bottom = '-164px';
+volumeControls.style.left = '-3px';
+} else {
+volumeControls.style.bottom = '52px';
+volumeControls.style.left = '-3px';
+}
+}
+</script>
+.com/css?family=Concert+One|Pacifico');
 
 .mobile {
 position: fixed;
