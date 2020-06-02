@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<title>Happy Birthday Jessica!</title>
+<head>
 <style>
 @import url('https://fonts.googleapis.com/css?family=Concert+One|Pacifico');
 
@@ -12,13 +15,16 @@
 
 h1, h2, span {
   display: none;
+
 }
 
-@media screen and (min-width: 670px) {
-  
-  .mobile {
-    display: none;
-  }
+#all{
+    width:100%;
+    height:100%;
+    overflow-x:hidden;
+    overflow-y: visible;
+    position:relative;
+}
   
   h1, h2, span {
   display: block;
@@ -301,106 +307,167 @@ bokeh {
 }
     
 .pyro > .after {
-  @include animation-delay((1.25s, 1.25s, 1.25s));
-  @include animation-duration((1.25s, 1.25s, 6.25s));
+  animation-delay: ((1.25s, 1.25s, 1.25s));
+  animation-duration:((1.25s, 1.25s, 6.25s));
 }
         
-@include keyframes(bang) {
-  to {
-    box-shadow:$box-shadow;
-  }
-}
-    
-@include keyframes(gravity)  {
-  to {
-    @include transform(translateY(200px));
-    opacity: 0;
-  }
-}
-    
-@include keyframes(position) {
-  0%, 19.9% {
-    margin-top: 10%;
-    margin-left: 40%;
-  }
-  20%, 39.9% {
-    margin-top: 40%;
-    margin-left: 30%;
-  }
-  40%, 59.9% {  
-    margin-top: 20%;
-    margin-left: 70%
-  }
-  60%, 79.9% {  
-    margin-top: 30%;
-    margin-left: 20%;
-  }
-  80%, 99.9% {  
-    margin-top: 30%;
-    margin-left: 80%;
-  }
+.container {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  height: 340px;
+  width: 80%;
+  max-width: 340px;
+  margin: 10vh auto 0;
 }
 
+btn {
+  padding: .675em 40px;
+  position: relative;
+  text-align: center;
+  letter-spacing: .15em;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.2s linear color;
 }
-</style>
-<html>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-  <bokeh></bokeh>
-<div class="mobile">Open in desktop</div>
-<div class="pyro">
-  <div class="before"></div>
-  <div class="after"></div>
-</div>
-<h1>&hearts;&nbsp;&hearts;&nbsp;&hearts;&nbsp;&hearts;&nbsp;&hearts;&nbsp;&hearts;&nbsp;&hearts;&nbsp;&hearts;&nbsp;&hearts;</h1>
-<h2>Happy Birthday Jessica!</h2>
-<span>🎉</span>
-<div class="candle">
-   <div id="flame" class="lit"></div>
-</div>
 
-<div class="cake"></div>
-<div class="plate"></div>
-</html>
+btn:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  z-index: -1;
+  transform: scale(1, 1);
+  transition: 0.2s linear all;
+  border-radius: .4rem;
+}
+
+btn:hover:before {
+  transform: scale(1.04, 1.02);
+  color: #fff;
+}
+
+.red{
+  color: #ff5252;
+}
+.red:hover{
+  color: #aa1414;
+}
+.red:before{
+  border: 4px solid #ff5252;
+}
+.red:hover:before{
+  background-color: #ff5252;
+}
+.blue{
+  color: #1e83ec;
+}
+.blue:hover{
+  color: #0a42a1;
+}
+.blue:before{
+  border: 4px solid #1e83ec;
+}
+.blue:hover:before{
+  background-color: #1e83ec;
+}
+
+.purple{
+  color: #673ab7;
+}
+.purple:hover{
+  color: #312174;
+}
+.purple:before{
+  border: 4px solid #673ab7;
+}
+.purple:hover:before{
+  background-color: #673ab7;
+}
+
+.green{
+  color: #1c9963;
+}
+.green:hover{
+  color: #0a6842;
+}
+.green:before{
+  border: 4px solid #1c9963;
+}
+.green:hover:before{
+  background-color: #1c9963;
+}
+
+
+    
+    </style>
+<bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+      <bokeh></bokeh>
+    <div>           
+    <div class="pyro">
+      <div class="before"></div>
+      <div class="after"></div>
+    </div>
+    <h1>&hearts;&nbsp;&hearts;&nbsp;&hearts;&nbsp;&hearts;&nbsp;&hearts;&nbsp;&hearts;&nbsp;&hearts;&nbsp;&hearts;&nbsp;&hearts;</h1>
+    <h2>Happy Birthday Jessica!</h2>
+    <span>🎉</span>
+    <div class="candle">
+       <div id="flame" class="lit"></div>
+    </div>
+    
+    <div class="cake"></div>
+    <div class="plate"></div>
+<br></br><br></br><br></br><br></br><br></br><br></br><br>
+<section class="container">
+  <btn class="red">CALL ME MAYBE</btn>
+  <btn class="blue">ON A ROLL</btn>
+  <btn class="purple">THANK YOU, NEXT</btn>
+  <btn class="green">DONT START NOW</btn>
+</section>
+    </html>
