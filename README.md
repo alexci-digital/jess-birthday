@@ -4,7 +4,7 @@ A static page I threw up last minute for my sisters 21st birthday. Due to the Co
 <br></br>**
 This page contains work by  English singer <b><a href="https://www.dualipa.com">Dua Lipa<a></b> from her second studio album, Future Nostalgia (2020):
 <br></br>
-<i>'Don't Start Now'</i> written by Lupa, <b><a href="https://en.wikipedia.org/wiki/Caroline_Ailin">Caroline Ailin<a></b>, <b><a href="https://en.wikipedia.org/wiki/Emily_Warren">Emily Warren<a></b>, and the songs producer <b><a href="https://en.wikipedia.org/wiki/Ian_Kirkpatrick_(record_producer)">Ian Kirkpatrick.<a></b>
+<i>'Don't Start Now'</i> written by Lipa, <b><a href="https://en.wikipedia.org/wiki/Caroline_Ailin">Caroline Ailin<a></b>, <b><a href="https://en.wikipedia.org/wiki/Emily_Warren">Emily Warren<a></b>, and the songs producer <b><a href="https://en.wikipedia.org/wiki/Ian_Kirkpatrick_(record_producer)">Ian Kirkpatrick.<a></b>
 <br>
 Performed by Dua Lipa; Courtesy of Warner Records Inc.
   
